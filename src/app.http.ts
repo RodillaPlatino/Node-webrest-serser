@@ -23,7 +23,7 @@ const server = http.createServer((req, resp)=>{
     if(req.url?.endsWith('.js')){
         resp.writeHead(200, {'Content-Type': 'application/javascript'});
     } else if(req.url?.endsWith('.css')){
-        resp.writeHead(200,  {'Content-Type': 'test/css'});
+        resp.writeHead(200,  {'Content-Type': 'text/css'});
     }
 
     const responseContent = fs.readFileSync(`./public${req.url}`, 'utf-8');
